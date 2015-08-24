@@ -1,0 +1,43 @@
+<head>
+<script type="text/javascript" src="calculator.js"></script>
+<script type="text/javascript">
+	window.onload = function() {
+		var equationControl = document.getElementById('equation');
+		var currentNumberControl = document.getElementById('currNumber');
+		calculator.init(equationControl, currentNumberControl);
+	};
+</script>
+</head>
+<body>
+<div>
+	<h2> Calculator </h2>
+	<div class="Calculator">
+		<div class ="CalculatorHead">
+			<div id="equation" class="Equation"></div>
+			<div id="currNumber" class="CurrentNumber">0</div>
+		</div>
+		<div>
+			<button class="Button" onclick="calculator.numberClick(event);">1</button>
+			<button class="Button" onclick="calculator.numberClick(event);">2</button>
+			<button class="Button" onclick="calculator.numberClick(event);">3</button>
+			<br><br>
+			<button class="Button" onclick="calculator.numberClick(event);">4</button>
+			<button class="Button" onclick="calculator.numberClick(event);">5</button>
+			<button class="Button" onclick="calculator.numberClick(event);">6</button>
+			<br><br>
+			<button class="Button" onclick="calculator.numberClick(event);">7</button>
+			<button class="Button" onclick="calculator.numberClick(event);">8</button>
+			<button class="Button" onclick="calculator.numberClick(event);">9</button>
+			<br><br>
+			<button class="Button" onclick="calculator.numberClick(event);">0</button>
+			<button class="Button" onclick="calculator.setOperator('+');">+</button>
+			<button class="Button" onclick="calculator.setOperator('-');">-</button>
+			<br><br>
+			<button class="Button" onclick="calculator.setOperator('*');">*</button>
+			<button class="Button" onclick="calculator.setOperator('/');">/</button>
+			<button class="Button" onclick="calculator.setOperator('=');">=</button>
+			<br><br>
+			<button class="Button" onclick="calculator.clearNumbers();">Clear</button>
+	</div>
+</div>
+</body>
